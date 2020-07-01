@@ -1,100 +1,104 @@
-# Use antd in create-react-app ✨
 
-[Create React App](https://facebook.github.io/create-react-app/) + [Ant Design](https://ant.design).
 
-## Step by Step Documentation
+# 简介
 
-- 🇺🇸 English: https://ant.design/docs/react/use-with-create-react-app
-- 🇨🇳 中文：https://ant.design/docs/react/use-with-create-react-app-cn
+react-antd-admin `React` 和 `Ant Design` 的后台管理系统模板。它内置了用户登录/登出，动态路由，权限校验，用户管理等典型的业务模型，可以帮助你快速搭建企业级中后台产品原型，是你接私活的不二之选。
 
-## Preview
+本系统的开发灵感来自 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/) ，这是一个基于 `Vue` 和 `ElementUI` 的优秀的后台管理系统模板，在这里向大佬致敬！
 
-```bash
-$ npm install
-$ npm start
-```
 
-or:
+# 功能
 
 ```bash
-$ yarn
-$ yarn start
+- 登录 / 注销
+
+- 权限验证
+  - 页面权限
+  - 路由权限
+
+- 全局功能
+  - 动态侧边栏（支持多级路由嵌套）
+  - 动态面包屑
+  - 本地/后端 mock 数据
+  - Screenfull全屏
+  - 自适应收缩侧边栏
+
+- 编辑器
+  - 富文本
+  - Markdown
+
+- Excel
+  - 导出excel
+  - 导入excel
+  - 前端可视化excel
+
+- Zip
+  - 导出zip
+
+- 错误页面
+  - 404
+
+- 组件
+  - 拖拽列表
+
+- 表格
+- Dashboard
+- 引导页
+- ECharts 图表
+- 剪贴板
 ```
 
-## See more
+# 目录结构
 
-- [antd](http://github.com/ant-design/ant-design/)
-- [create-react-app](https://github.com/facebookincubator/create-react-app)
-- [craco](https://github.com/gsoft-inc/craco)
-- [craco-less](https://github.com/DocSpring/craco-less)
+```bash
+├─ public                     # 静态资源
+│   ├─ favicon.ico            # favicon图标
+│   └─ index.html             # html模板
+├─ src                        # 项目源代码
+│   ├─ api                    # 所有请求
+│   ├─ assets                 # 图片 字体等静态资源
+│   ├─ components             # 全局公用组件
+│   ├─ config                 # 全局配置
+│   │   ├─ menuConfig.js      # 导航菜单配置
+│   │   └─ routeMap.js        # 路由配置
+│   ├─ lib                    # 第三方库按需加载
+│   ├─ mock                   # 项目mock 模拟数据
+│   ├─ store                  # 全局 store管理
+│   ├─ styles                 # 全局样式
+│   ├─ utils                  # 全局公用方法
+│   ├─ views                  # views 所有页面
+│   ├─ App.js                 # 入口页面
+│   ├─ defaultSettings.js     # 全局默认配置
+│   └─index.js                # 源码入口
+├── .env.development          # 开发环境变量配置
+├── .env.production           # 生产环境变量配置
+├── config-overrides.js       # 对cra的webpack自定义配置
+├── deploy.sh                 # CI部署脚本
+├── .travis.yml               # 自动化CI配置
+└── package.json              # package.json
+```
 
----
+# 安装
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```shell
+# 克隆项目
+git clone https://github.com/NLRX-WJC/react-antd-admin-template.git
 
-## Available Scripts
+# 进入项目目录
+cd react-antd-admin-template
 
-In the project directory, you can run:
+# 安装依赖
+npm install
 
-### `npm start`
+# 切换淘宝源，解决 npm 下载速度慢的问题
+npm install --registry=https://registry.npm.taobao.org
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# 启动服务
+npm start
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+启动完成后会自动打开浏览器访问 [http://localhost:3000](http://localhost:3000)， 你看到下面的页面就代表操作成功了。
 
-### `npm test`
+![](./guide.gif)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+接下来你可以修改代码进行业务开发了。
