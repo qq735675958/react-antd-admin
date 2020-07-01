@@ -1,14 +1,17 @@
 {
-  "name": "react_antd_admin_template",
+  "name": "react_antd_admin",
   "version": "1.0.0",
   "author": "<735675958@qq.com>",
   "license": "MIT",
   "private": true,
+  "homepage": ".",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@craco/craco": "^5.6.4",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^11.1.0",
     "@toast-ui/react-editor": "^2.1.0",
+    "craco-less": "^1.17.0",
     "antd": "^3.17.0",
     "axios": "^0.19.2",
     "clipboard": "^2.0.6",
@@ -43,9 +46,9 @@
     "xlsx": "^0.16.0"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired --max-old-space-size=4096 build ",
-    "test": "react-app-rewired test",
+    "start": "craco start",
+    "build": "craco build --max-old-space-size=4096 build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "commit": "git cz"
   },
@@ -66,12 +69,9 @@
   },
   "devDependencies": {
     "user-agent": "^1.0.4",
-    "babel-plugin-import": "^1.13.0",
     "commitizen": "^4.0.3",
-    "customize-cra": "^0.9.1",
     "cz-conventional-changelog": "^3.0.2",
-    "mockjs": "^1.1.0",
-    "react-app-rewired": "^2.1.5"
+    "mockjs": "^1.1.0"
   },
   "config": {
     "commitizen": {
