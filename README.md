@@ -82,7 +82,7 @@ react-antd-admin `React` 和 `Ant Design` 的后台管理系统模板。它内�
 
 ```shell
 # 克隆项目
-git clone https://github.com/NLRX-WJC/react-antd-admin-template.git
+git clone https://github.com/qq735675958/react-antd-admin
 
 # 进入项目目录
 cd react-antd-admin-template
