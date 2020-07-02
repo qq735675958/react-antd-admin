@@ -49,7 +49,7 @@ const LayoutHeader = (props) => {
       <Menu.Item key="project">
         <a
           target="_blank"
-          href="https://github.com/qq735675958/my-react-admin"
+          href="https://github.com/qq735675958/react-antd-admin"
           rel="noopener noreferrer"
         >
           项目地址
